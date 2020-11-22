@@ -8,6 +8,12 @@ public class Volunteer extends AbsStaffMember {
 		
 		//TODO
 	}
+	
+	public Volunteer(String name, String address, String phone) throws Exception {
+		super(name, address, phone);
+		
+		//TODO
+	}
 
 	
 	@Override

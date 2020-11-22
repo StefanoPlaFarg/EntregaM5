@@ -1,12 +1,13 @@
 package com.jobs.application;
 
+import com.jobs.domain.AbsStaffMember;
 import com.jobs.domain.Employee;
 import com.jobs.domain.Volunteer;
 import com.jobs.persistence.EmployeeRepository;
 
 public class JobsController {
 
-	private EmployeeRepository repository = new EmployeeRepository(); //MODIFICAR
+	private EmployeeRepository repository = new EmployeeRepository();
 	
 	public JobsController(){
 		
@@ -34,16 +35,32 @@ public class JobsController {
 	}
 	
 	
-	public void payAllEmployeers() {
-		// TODO Auto-generated method stub
+	public void payAllEmployeers() {				
+		for (AbsStaffMember staff:repository.getAllMembers()) {
+			staff.pay();			
+		}
 	
 	}
 
 	public String getAllEmployees() {
-		// TODO Auto-generated method stub
-		return null;
-	}
+		String NamesStaffList = "";
 
+		if (repository == null) {
+			NamesStaffList = "No hay empleados";
+
+		} else {
+			for (AbsStaffMember staff : repository.getAllMembers()) {
+
+				if (!staff.getName().equals("")) {
+					NamesStaffList = NamesStaffList + staff.getName() + " ";
+
+				}
+			}
+
+		}
+
+		return NamesStaffList;
+	}
 	
 	
 	

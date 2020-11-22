@@ -24,6 +24,9 @@ public abstract class AbsStaffMember {
 		id = COUNTER_MEMBERS;
 		COUNTER_MEMBERS++;
 	}
-
 	public abstract void pay();
+	
+	public String getName() {
+		return name ;
+	}
 }

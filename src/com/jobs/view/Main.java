@@ -11,7 +11,7 @@ public class Main {
 	public static void main(String[] args) throws Exception {
 		
 	try {	
-		controller.createBossEmployee("Pepe Reina", "Dirección molona", "666666666", -4000.0);
+		controller.createBossEmployee("Pepe Reina", "Dirección molona", "666666666", 4000.0);
 		controller.createEmployee("Pedro Martinez", "Dirección molona 2", "665266666", 1500.0);
 		controller.createEmployee("Laura Navarro", "Dirección molona 3", "625266666", 1000.0);
 		controller.createVolunteer("Juan Palomar", "Dirección molona 4", "614266666");

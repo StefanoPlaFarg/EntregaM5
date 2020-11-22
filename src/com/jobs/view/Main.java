@@ -10,19 +10,20 @@ public class Main {
 	
 	public static void main(String[] args) throws Exception {
 		
-		controller.createBossEmployee("Pepe Boss", "Dirección molona", "666666666", 100.0);
-		controller.createEmployee("Pedro Employee", "Dirección molona 2", "665266666", 40.0);
-		controller.createEmployee("Laura Employee", "Dirección molona 3", "625266666", 45.0);
-		controller.createVolunteer("Juan Volunteer", "Dirección molona 4", "614266666");
-		controller.createManagerEmployee("Pedro Employee", "Dirección molona 2", "665226666", 80.0);
+		controller.createBossEmployee("Pepe Reina", "Dirección molona", "666666666", 4000.0);
+		controller.createEmployee("Pedro Martinez", "Dirección molona 2", "665266666", 1500.0);
+		controller.createEmployee("Laura Navarro", "Dirección molona 3", "625266666", 1000.0);
+		controller.createVolunteer("Juan Palomar", "Dirección molona 4", "614266666");
+		controller.createManagerEmployee("Renzo Minotti", "Dirección molona 2", "665226666", 2000.0);
 		
 		
 		controller.payAllEmployeers();
 		
-		String allEmployees=controller.getAllEmployees();
+		String allEmployees=controller.getAllEmployees();		
+		String allSalaries=controller.getAllSalaries();	
 		
 		System.out.println("EMPLOYEES: " + allEmployees + " \n");
-		
+		System.out.println("SALARIES: " + allSalaries + " \n");
 	}
 
 }

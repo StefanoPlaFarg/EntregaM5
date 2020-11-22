@@ -52,7 +52,7 @@ public class JobsController {
 			for (AbsStaffMember staff : repository.getAllMembers()) {
 
 				if (!staff.getName().equals("")) {
-					NamesStaffList = NamesStaffList + staff.getName() + " ";
+					NamesStaffList = NamesStaffList + staff.getName() + ", ";
 
 				}
 			}
@@ -61,6 +61,30 @@ public class JobsController {
 
 		return NamesStaffList;
 	}
+	
+	
+	public String getAllSalaries() {
+		
+		String SalariesStaffList = "";
+
+		if (repository == null) {
+			SalariesStaffList = "No hay salarios porque no hay empleados";
+
+		} else {
+			for (AbsStaffMember staff : repository.getAllMembers()) {
+
+				if (!staff.getName().equals("")) {
+					SalariesStaffList = SalariesStaffList + staff.getSalary() + ", ";
+
+				}
+			}
+
+		}
+
+		return SalariesStaffList;
+	}
+	
+	
 	
 	
 	

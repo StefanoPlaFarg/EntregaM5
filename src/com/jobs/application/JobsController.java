@@ -5,7 +5,7 @@ import com.jobs.persistence.EmployeeRepository;
 
 public class JobsController {
 
-	private EmployeeRepository repository; //MODIFICAR
+	private EmployeeRepository repository = new EmployeeRepository(); //MODIFICAR
 	
 	public JobsController(){
 		
